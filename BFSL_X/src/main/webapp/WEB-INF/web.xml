@@ -1,0 +1,40 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <listener>
+  	<listener-class>listeners.Log4jListener</listener-class>
+  </listener>
+  <context-param>
+        <param-name>log4j-config-location</param-name>
+        <param-value>WEB-INF/log4j.properties</param-value>
+    </context-param>
+  <servlet>
+  	<servlet-name>Login</servlet-name>
+  	<display-name>Login</display-name>
+  	<description></description>
+  	<servlet-class>services.Login</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FetchNews</servlet-name>
+  	<display-name>FetchNews</display-name>
+  	<description></description>
+  	<servlet-class>services.FetchNews</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FetchApi</servlet-name>
+  	<display-name>FetchApi</display-name>
+  	<description></description>
+  	<servlet-class>services.FetchApi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FetchNews</servlet-name>
+  	<url-pattern>/FetchNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FetchApi</servlet-name>
+  	<url-pattern>/FetchApi</url-pattern>
+  </servlet-mapping>
+</web-app>
